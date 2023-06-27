@@ -1,8 +1,8 @@
 function[xnum,y]=directint(a,b,n,m)
-N=n*m;
 h=(b-a)/n;
-xnum=zeros(N,1);    %x坐标
-sigmanum=zeros(N,1);         %y坐标 
+N=n*m;
+sigmanum=zeros(N,1);
+xnum=zeros(N,1);  
 for i=1:n
     for j=1:m
       xnum((i-1)*m+j)=a+(i-1)*h+(1+cos((2*m-2*j+1)*pi/(2*m)))*h/2;
