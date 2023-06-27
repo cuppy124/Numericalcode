@@ -1,4 +1,4 @@
-function[answ]=directmethod(n,m,a,b,A,B)  %n表示分成n个等距区间，m表示chebyshev点为cos(jpi/m),ab表示区间端点，AB表示边界条件代表的矩阵和向量
+function[answ]=directmethod(n,m,a,b,A,B)  
 N=n*m;
 h=(b-a)/n;
 xnum=zeros(N,1);    %x坐标
