@@ -1,4 +1,4 @@
-convv=zeros(1,9);
+vectv=zeros(1,9);
 for i=1:9
     max=0;
     for j=1:M
@@ -9,4 +9,4 @@ for i=1:9
         convv(1,i)=log(max);
     end
 end
-plot((1:9),convv)
+plot((1:9),vectv)
