@@ -1,8 +1,8 @@
 function[solution1,newphik,newsigmak,xnum]=nnnewtonit(sigmak,a,c)  %sigmak是2xM
 M=size(sigmak,2);
 phik=zeros(2,M);
-newphik=phik;
 xnum=zeros(1,M);
+newphik=phik;
 for i=1:M
     xnum(i)=(c-a)/2*cos((2*M-2*i+1)*pi/(2*M))+(c+a)/2;
 end
