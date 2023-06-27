@@ -1,4 +1,4 @@
-function[alx,blx,dlx,arx,brx,drx]=upwardsweep(A)   %A表示6xM矩阵，行为alpha(lx),beta(lx),delta(lx),alpha(rx),beta(rx),delta(rx)
+function[alx,blx,dlx,arx,brx,drx]=sweep(A)   %A表示6xM矩阵，行为alpha(lx),beta(lx),delta(lx),alpha(rx),beta(rx),delta(rx)
 M=size(A,2);
 layer=binarylayer(M);
 N=length(layer);
