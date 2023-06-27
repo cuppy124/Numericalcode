@@ -1,16 +1,15 @@
-%s是唯一的每个函数去不同的值
-function[unum,dunum,snum]=globalsolverandevaluation(xnum,K) %xnum为1x(M+1),表示M个区间，K为order
-s=2;    
+function[unum,dunum,snum]=globalsolverandevaluation(xnum,K) 
 M=length(xnum)-1;
-layer=binarylayer(M);
 N=length(layer);
-pinvf=zeros(K,M);   %每列一个Bi
+s=2;    
+layer=binarylayer(M);
+pinvf=zeros(K,M);  
 pinvphil=pinvf;
 pinvphir=pinvf;
 A=zeros(6,M);
-unum=zeros(M,K);  %每行表示Bi上的u值
-dunum=unum;  %表示导数
-snum=zeros(1,M);  %表示所有Si
+unum=zeros(M,K); 
+dunum=unum;  
+snum=zeros(1,M);  
 for i=1:M
    solu=localsolver(xnum(i),xnum(i+1),K);
    pinvf(:,i)=solu(:,1);
